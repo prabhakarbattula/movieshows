@@ -1,0 +1,12 @@
+<%= form_for @show, :url => shows_path do |show| %>
+
+    <%= show.hidden_field :theatre_id %>
+    Morning Show :  <%= show.text_field :morning  %> <br>
+    Matinee Show :  <%= show.text_field :matinee  %> <br>
+    First Show :  <%= show.text_field :first  %> <br>
+    Second Show :  <%= show.text_field :second  %> <br>
+    <br>
+    <%= show.submit "Create Shows", :class => 'btn btn-small btn-success' %>
+    <%= link_to "Go back to Main Page", theatres_path, :class => 'btn btn-small btn-primary' %>
+
+<% end %>

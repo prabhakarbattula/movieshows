@@ -1,0 +1,9 @@
+<%= form_for @theatre, :url => theatres_path do |theatre| %>
+
+    Name :  <%= theatre.text_field :name  %> <br>
+    Place  :  <%= theatre.text_field :place %>  <br>
+   <br>
+    <%= theatre.submit "Create New Theatre", :class => 'btn btn-small btn-success' %>
+    <%= link_to "Go back to Main Page", theatres_path, :class => 'btn btn-small btn-primary' %>
+
+<% end %>

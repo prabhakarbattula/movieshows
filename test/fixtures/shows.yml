@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  morning: MyString
+  matinee: MyString
+  first: MyString
+  second: MyString
+  theatre_id: 1
+
+two:
+  morning: MyString
+  matinee: MyString
+  first: MyString
+  second: MyString
+  theatre_id: 1
