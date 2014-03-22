@@ -1,0 +1,7 @@
+<%= form_for @movie, :url => movie_path  do |movie| %>
+
+    Movie Name: <%= movie.text_field :name %> <br>
+    Movie Language: <%= movie.text_field :language %> <br>
+    <%= movie.submit "Update Movie" %>
+
+<% end %>

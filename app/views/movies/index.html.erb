@@ -1,7 +1,7 @@
 
-<%= link_to "Create New Theatre", new_theatre_path, :class => 'btn btn-small btn-success' %>
+<%= link_to "Create New Movie", new_movie_path, :class => 'btn btn-small btn-success' %>
 <hr>
-<h4> Displaying Theatres </h4>
+<h4> Displaying Movies </h4>
 
 <head>
   <style>
@@ -35,13 +35,13 @@
 
   </tr>
 
-  <% @theatres.each do |theatre| %>
+  <% @movies.each do |movie| %>
       <tr>
-        <td><%= link_to theatre.name.upcase, theatre_path(theatre.id) %></td>
-        <td><%= theatre.place.upcase %></td>
+        <td><%= link_to movie.name.upcase, movie_path(movie.id) %></td>
+        <td><%= movie.language.capitalize %></td>
 
-        <td> <%= link_to "EDIT", edit_theatre_path(theatre.id), :class => 'btn btn-mini btn-warning' %> </td>
-        <td> <%= link_to "DELETE", theatre_path(theatre.id), method: :delete, :class => 'btn btn-mini btn-danger' %> </td>
+        <td> <%= link_to "EDIT", edit_movie_path(movie.id), :class => 'btn btn-mini btn-warning' %> </td>
+        <td> <%= link_to "DELETE", movie_path(movie.id), :class => 'btn btn-mini btn-danger', method: :delete %> </td>
       </tr>
   <% end %>
 </table>

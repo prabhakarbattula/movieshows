@@ -1,0 +1,47 @@
+
+<%#= link_to "Create New Theatre", new_theatre_path, :class => 'btn btn-small btn-success' %>
+
+<h4> Displaying shows for "<%= @theatre.name.upcase %>" theatre </h4>
+
+<head>
+  <style>
+
+      table, td, th
+      {
+          border:2px solid blue;
+      }
+      th
+      {
+          background-color: royalblue;
+          color:white;
+      }
+      td, th
+      {
+          padding:5px;
+      }
+      tr:nth-child(even) {background-color: white}
+      tr:nth-child(odd) {background-color: lightcyan}
+  </style>
+</head>
+
+<body>
+<table>
+  <tr>
+    <th>Morning Show</th>
+    <th>Matinee Show</th>
+    <th>First Show</th>
+    <th>Second Show</th>
+    <th>ACTION</th>
+  </tr>
+
+  <% @theatre.shows.each do |show| %>
+  <tr>
+     <td> <%= a = show.morning %> | <%= Movie.find(a).name.upcase %> </td>
+     <td> <%= b = show.matinee %> | <%= Movie.find(b).name.upcase %> </td>
+     <td> <%= c = show.first %> | <%= Movie.find(c).name.upcase %> </td>
+     <td> <%= d = show.second %> | <%= Movie.find(d).name.upcase %> </td>
+     <td> <%= link_to "EDIT", edit_show_path(show.id), :class => "btn btn-info btn-small" %></td>
+  </tr>
+  <% end %>
+</table>
+</body>

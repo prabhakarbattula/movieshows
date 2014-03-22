@@ -1,54 +1,9 @@
-<%= link_to "CREATE New Shows", new_show_to_theatre_path(@theatre.id), :class => 'btn btn-small btn-success' %>
-<%= link_to "Go back to Main Page", theatres_path, :class => 'btn btn-small btn-info' %>
-<h4>Theatre Details: </h4>
-<%= @theatre.name.upcase %> <br>
-[ <small> <%= @theatre.place.capitalize %>   </small>]     <br>
+<h5> Displaying details of theatre</h5>
 <hr>
+<h6> Name:  <%= @theatre.name.upcase %> </h6> <br>
+[ <small> <%= @theatre.place.upcase %> </small>] <br>
+[<small> <%= @theatre.created_at %> | <%= @theatre.updated_at %> </small>]    <br> <br>
 
+<%= link_to "Go Back to Theatre Page", theatres_path, :class => "btn btn-small btn-warning" %>
 
-<h4> Shows List: </h4>
-
-<head>
-  <style>
-      table, td, th
-      {
-          border:2px solid blue;
-      }
-      th
-      {
-          background-color: royalblue;
-          color:white;
-      }
-      td, th
-      {
-          padding:5px;
-      }
-      tr:nth-child(even) {background-color: white}
-      tr:nth-child(odd) {background-color: lightcyan}
-  </style>
-</head>
-
-<body>
-<table>
-  <tr>
-    <th>Morning</th>
-    <th>Matinee</th>
-    <th>First Show</th>
-    <th>Second Show</th>
-    <th> ACTION </th>
-    <th> ACTION </th>
-  </tr>
-
-  <% @theatre.shows.each do |show| %>
-      <tr>
-        <td><%= show.morning.titleize %></td>
-        <td><%= show.matinee.titleize %></td>
-        <td><%= show.first.titleize %></td>
-        <td><%= show.second.titleize %></td>
-
-        <td> <%= link_to "EDIT", edit_show_path(show.id), :class => 'btn btn-mini btn-warning' %> </td>
-        <td> <%= link_to "DELETE", theatres_path, :class => 'btn btn-mini btn-danger' %> </td>
-      </tr>
-  <% end %>
-</table>
-</body>
+<%= link_to "Create Shows", new_show_path, :class => "btn btn-small btn-success" %>

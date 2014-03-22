@@ -23,6 +23,7 @@ class TheatresController < ApplicationController
 
   def show
     @theatre = Theatre.find(params[:id])
+    #@show = Show.find_by_theatre_id(params[:id])
   end
 
   def index
@@ -34,6 +35,18 @@ class TheatresController < ApplicationController
     @theatre.delete
 
     redirect_to theatres_path
+  end
+
+  def search
+
+  end
+
+  def spot
+     @theatre = Theatre.find(params[:id])
+  end
+
+  def display
+    @theatres = Theatre.search(params[:search]).order("name")
   end
 
   def theatre_params

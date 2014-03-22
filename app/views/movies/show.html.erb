@@ -1,0 +1,9 @@
+<h4>Displaying details of Movie</h4>
+<hr>
+
+Movie Name: <%= @movie.name %> <br>
+Movie Language: <%= @movie.language %> <br>
+<small> <%= @movie.created_at %> |
+ <%= @movie.updated_at %> </small>  <br>    <br>
+
+<%= link_to "Go Back to Movies Page", movies_path, :class => "btn-info btn-small" %>

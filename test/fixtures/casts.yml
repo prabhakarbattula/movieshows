@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hero: MyString
+  heroin: MyString
+  villian: MyString
+  movie_id: 1
+
+two:
+  hero: MyString
+  heroin: MyString
+  villian: MyString
+  movie_id: 1

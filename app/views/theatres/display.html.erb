@@ -1,0 +1,40 @@
+<h4> Displaying search results for Theatres </h4>
+
+<head>
+  <style>
+
+      table, td, th
+      {
+          border:2px solid blue;
+      }
+      th
+      {
+          background-color: royalblue;
+          color:white;
+      }
+      td, th
+      {
+          padding:5px;
+      }
+      tr:nth-child(even) {background-color: white}
+      tr:nth-child(odd) {background-color: lightcyan}
+  </style>
+</head>
+
+<body>
+<table>
+  <tr>
+    <th>Theatre Name</th>
+
+    </tr>
+
+  <% @theatres.each do |theatre| %>
+      <tr>
+        <td><%= link_to theatre.name.upcase, spot_theatre_path(id: theatre.id) %></td>
+      </tr>
+  <% end %>
+</table>
+</body>
+
+<%= link_to "Go Back to Main Page", root_theatre_path %>
+

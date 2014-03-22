@@ -1,0 +1,47 @@
+
+<h4> Displaying search results for Movies </h4>
+
+<head>
+  <style>
+
+      table, td, th
+      {
+          border:2px solid blue;
+      }
+      th
+      {
+          background-color: royalblue;
+          color:white;
+      }
+      td, th
+      {
+          padding:5px;
+      }
+      tr:nth-child(even) {background-color: white}
+      tr:nth-child(odd) {background-color: lightcyan}
+  </style>
+</head>
+
+<body>
+<table>
+  <tr>
+    <th>Movie Name</th>
+
+
+
+  </tr>
+
+  <% @movies.each do |movie| %>
+      <tr>
+        <td><%= link_to movie.name.upcase, movie_path(id: movie.id) %></td>
+
+
+      </tr>
+  <% end %>
+</table>
+</body>
+
+<%= params.inspect %>
+
+<%= link_to "Go Back to Main Page", root_theatre_path %>
+

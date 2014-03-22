@@ -1,11 +1,12 @@
 <%= form_for @show, :url => show_path(@show.id) do |show| %>
 
-    <%= show.hidden_field :theatre_id %>
-    Morning Show :  <%= show.text_field :morning  %> <br>
-    Matinee Show :  <%= show.text_field :matinee  %> <br>
-    First Show :  <%= show.text_field :first  %> <br>
-    Second Show :  <%= show.text_field :second  %> <br>
+    Theatre : <%= show.select :theatre_id, Theatre.all.collect {|t| [t.name, t.id] }, { include_blank: true} %>  <br>
+    Morning Show : <%= show.select :morning, Movie.all.collect {|p|[p.name, p.id]}, { include_blank: true}  %>  <br>
+    Matinee Show : <%= show.select :matinee, Movie.all.collect {|p|[p.name, p.id]}, { include_blank: true} %>  <br>
+    First Show :   <%= show.select :first, Movie.all.collect {|p|[p.name, p.id]}, { include_blank: true}  %> <br>
+    Second Show :  <%= show.select :second, Movie.all.collect {|p|[p.name, p.id]}, { include_blank: true}  %> <br>
     <br>
+
     <%= show.submit "Update Shows", :class => 'btn btn-small btn-success' %>
     <%= link_to "Go back to Main Page", theatres_path, :class => 'btn btn-small btn-primary' %>
 
