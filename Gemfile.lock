@@ -58,6 +58,11 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_search (0.5.4)
+      actionpack (>= 3.0.0.beta4)
+      activerecord (>= 3.0.0.beta4)
+      activesupport (>= 3.0.0.beta4)
+      arel (>= 0.4.0)
     mime-types (1.25.1)
     minitest (5.3.1)
     multi_json (1.9.0)
@@ -135,6 +140,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
+  meta_search
   rails (= 4.1.0.rc1)
   sass-rails (~> 4.0.1)
   sdoc (~> 0.4.0)

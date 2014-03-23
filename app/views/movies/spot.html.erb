@@ -3,28 +3,64 @@
 
 <hr>
 
-   <h6> MORNING (12:00) Shows in following theatres </h6>
-  <% @show_mor.each do |show| %>
-        <%= show.theatre.name.upcase %> <br>
-  <% end %>
+<head>
+  <style>
 
-<hr>
+      table, td, th
+      {
+          border:2px solid blue;
+      }
+      th
+      {
+          background-color: royalblue;
+          color:white;
+      }
+      td, th
+      {
+          padding:5px;
+      }
+      tr:nth-child(even) {background-color: white}
+      tr:nth-child(odd) {background-color: lightcyan}
+  </style>
+</head>
 
-<h6> MATINEE (15:00) Shows in following theatres </h6>
-<% @show_mat.each do |show| %>
-    <%= show.theatre.name.upcase %> <br>
-<% end %>
+<body>
+<table>
+  <tr>
+    <th>MORNING (12:00) Show</th>
+    <th>MATINEE (15:00) Show</th>
+    <th>FIRST (18:00) Show</th>
+    <th>SECOND (21:00) Show</th>
+  </tr>
 
-<hr>
+      <tr>
+        <td>
+          <% @show_mor.each do |show| %>
+          <mark> <%= show.theatre.name.upcase %> </mark> <br>
+          <% end %>
+        </td>
 
-<h6> FIRST (18:00) Shows in following theatres </h6>
-<% @show_fir.each do |show| %>
-    <%= show.theatre.name.upcase %> <br>
-<% end %>
+        <td>
+          <% @show_mat.each do |show| %>
+          <mark> <%= show.theatre.name.upcase %> </mark> <br>
+          <% end %>
+        </td>
 
-<hr>
+        <td>
+          <% @show_fir.each do |show| %>
+          <mark> <%= show.theatre.name.upcase %> </mark> <br>
+          <% end %>
+        </td>
 
-<h6> SECOND (21:00) Shows in following theatres </h6>
-<% @show_sec.each do |show| %>
-    <%= show.theatre.name.upcase %> <br>
-<% end %>
+        <td>
+          <% @show_sec.each do |show| %>
+          <mark> <%= show.theatre.name.upcase %> </mark> <br>
+          <% end %>
+        </td>
+
+      </tr>
+
+</table>
+</body>
+
+

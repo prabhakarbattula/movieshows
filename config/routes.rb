@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root "theatres#root"
 
   get 'movies/search' => 'movies#search', as: :search_movie
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   get 'theatres/spot/:id' => 'theatres#spot', as: :spot_theatre
   get 'movies/spot/:id' => 'movies#spot', as: :spot_movie
 
-  resources :shows, :theatres, :movies, :cast
+  resources :shows, :theatres, :movies, :casts
 
   #get "shows/new/:id" => "shows#new", as: :new_show_to_theatre
 
