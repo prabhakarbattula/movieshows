@@ -37,7 +37,7 @@
 
   <% @movies.each do |movie| %>
       <tr>
-        <td><%= link_to movie.name.upcase, movie_path(movie.id) %></td>
+        <td><%= link_to movie.name.upcase, spot_movie_path(movie.id) %></td>
         <td><%= movie.language.capitalize %></td>
 
         <td> <%= link_to "EDIT", edit_movie_path(movie.id), :class => 'btn btn-mini btn-warning' %> </td>

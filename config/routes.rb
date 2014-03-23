@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'theatres/display' => 'theatres#display', as: :display_theatre
   get 'theatres/root' => 'theatres#root', as: :root_theatre
   get 'theatres/spot/:id' => 'theatres#spot', as: :spot_theatre
+  get 'movies/spot/:id' => 'movies#spot', as: :spot_movie
 
   resources :shows, :theatres, :movies, :cast
 

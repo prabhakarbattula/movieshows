@@ -3,6 +3,8 @@
 
 <h4> Displaying shows for "<%= @theatre.name.upcase %>" theatre </h4>
 
+<hr>
+
 <head>
   <style>
 
@@ -32,16 +34,20 @@
     <th>First Show</th>
     <th>Second Show</th>
     <th>ACTION</th>
+
+
   </tr>
 
   <% @theatre.shows.each do |show| %>
   <tr>
-     <td> <%= a = show.morning %> | <%= Movie.find(a).name.upcase %> </td>
-     <td> <%= b = show.matinee %> | <%= Movie.find(b).name.upcase %> </td>
-     <td> <%= c = show.first %> | <%= Movie.find(c).name.upcase %> </td>
-     <td> <%= d = show.second %> | <%= Movie.find(d).name.upcase %> </td>
+     <td> <% a = show.morning %>  <%= Movie.find(a).name.upcase %> </td>
+     <td> <% b = show.matinee %>  <%= Movie.find(b).name.upcase %> </td>
+     <td> <% c = show.first %>  <%= Movie.find(c).name.upcase %> </td>
+     <td> <% d = show.second %>  <%= Movie.find(d).name.upcase %> </td>
      <td> <%= link_to "EDIT", edit_show_path(show.id), :class => "btn btn-info btn-small" %></td>
+
   </tr>
   <% end %>
 </table>
 </body>
+

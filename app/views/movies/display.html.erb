@@ -33,15 +33,13 @@
 
   <% @movies.each do |movie| %>
       <tr>
-        <td><%= link_to movie.name.upcase, movie_path(id: movie.id) %></td>
+        <td><%= link_to movie.name.upcase, spot_movie_path(id: movie.id) %></td>
 
 
       </tr>
   <% end %>
 </table>
 </body>
-
-<%= params.inspect %>
 
 <%= link_to "Go Back to Main Page", root_theatre_path %>
 

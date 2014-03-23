@@ -1,0 +1,30 @@
+
+<h4> Displaying Shows and theatres for <br> <br> "<%= @movie.name.upcase %>" Movie </h4>
+
+<hr>
+
+   <h6> MORNING (12:00) Shows in following theatres </h6>
+  <% @show_mor.each do |show| %>
+        <%= show.theatre.name.upcase %> <br>
+  <% end %>
+
+<hr>
+
+<h6> MATINEE (15:00) Shows in following theatres </h6>
+<% @show_mat.each do |show| %>
+    <%= show.theatre.name.upcase %> <br>
+<% end %>
+
+<hr>
+
+<h6> FIRST (18:00) Shows in following theatres </h6>
+<% @show_fir.each do |show| %>
+    <%= show.theatre.name.upcase %> <br>
+<% end %>
+
+<hr>
+
+<h6> SECOND (21:00) Shows in following theatres </h6>
+<% @show_sec.each do |show| %>
+    <%= show.theatre.name.upcase %> <br>
+<% end %>

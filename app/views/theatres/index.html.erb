@@ -37,7 +37,7 @@
 
   <% @theatres.each do |theatre| %>
       <tr>
-        <td><%= link_to theatre.name.upcase, theatre_path(theatre.id) %></td>
+        <td><%= link_to theatre.name.upcase, spot_theatre_path(theatre.id) %></td>
         <td><%= theatre.place.upcase %></td>
 
         <td> <%= link_to "EDIT", edit_theatre_path(theatre.id), :class => 'btn btn-mini btn-warning' %> </td>

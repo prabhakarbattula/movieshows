@@ -1,5 +1,8 @@
 class Show < ActiveRecord::Base
-  belongs_to :theatre
+  validates_uniqueness_of :theatre_id
 
-  has_and_belongs_to_many :movies
+  belongs_to :theatre
+  belongs_to :movie
+
+  #has_and_belongs_to_many :movies
 end

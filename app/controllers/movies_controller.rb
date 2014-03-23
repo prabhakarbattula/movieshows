@@ -45,6 +45,14 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def spot
+    @movie = Movie.find(params[:id])
+    @show_mor = Show.where(morning: params[:id])
+    @show_mat = Show.where(matinee: params[:id])
+    @show_fir = Show.where(first: params[:id])
+    @show_sec = Show.where(second: params[:id])
+  end
+
 
   def movie_params
     params.require(:movie).permit(:name, :language, :theatre_id)
