@@ -44,7 +44,7 @@
      <td> <% b = show.matinee %>  <%= Movie.find(b).name.upcase %> </td>
      <td> <% c = show.first %>  <%= Movie.find(c).name.upcase %> </td>
      <td> <% d = show.second %>  <%= Movie.find(d).name.upcase %> </td>
-     <td> <%= link_to "EDIT", edit_show_path(show.id), :class => "btn btn-info btn-small" %></td>
+     <td> <%= link_to "EDIT", edit_show_path(show), :class => "btn btn-info btn-small" %></td>
 
   </tr>
   <% end %>

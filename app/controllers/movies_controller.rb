@@ -8,7 +8,8 @@ class MoviesController < ApplicationController
      @movie = Movie.new(movie_params)
      @movie.save
 
-    redirect_to movie_path(@movie.id)
+    redirect_to movie_path(@movie)
+
   end
 
   def search
@@ -27,7 +28,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.update(movie_params)
 
-    redirect_to movie_path(@movie.id)
+    redirect_to movie_path(@movie)
   end
 
   def show

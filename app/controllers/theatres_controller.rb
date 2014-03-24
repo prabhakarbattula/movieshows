@@ -7,7 +7,7 @@ class TheatresController < ApplicationController
     @theatre = Theatre.new(theatre_params)
     @theatre.save
 
-    redirect_to theatre_path(@theatre.id)
+    redirect_to theatre_path(@theatre)
   end
 
   def edit
@@ -18,7 +18,7 @@ class TheatresController < ApplicationController
     @theatre = Theatre.find(params[:id])
     @theatre.update(theatre_params)
 
-    redirect_to theatre_path(@theatre.id)
+    redirect_to theatre_path(@theatre)
   end
 
   def show

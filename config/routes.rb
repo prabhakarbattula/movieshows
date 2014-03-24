@@ -1,17 +1,29 @@
 Rails.application.routes.draw do
 
-
   root "theatres#root"
 
-  get 'movies/search' => 'movies#search', as: :search_movie
-  get 'movies/display' => 'movies#display', as: :display_movie
-  get 'theatres/search' => 'theatres#search', as: :search_theatre
-  get 'theatres/display' => 'theatres#display', as: :display_theatre
-  get 'theatres/root' => 'theatres#root', as: :root_theatre
-  get 'theatres/spot/:id' => 'theatres#spot', as: :spot_theatre
-  get 'movies/spot/:id' => 'movies#spot', as: :spot_movie
+  resources :theatres do
+    member do
+      get 'spot'
+    end
+    collection do
+      get 'search'
+      get 'display'
+      get 'root'
+    end
+  end
 
-  resources :shows, :theatres, :movies, :casts
+  resources :movies do
+    member do
+      get 'spot'
+    end
+    collection do
+      get 'search'
+      get 'display'
+    end
+  end
+
+  resources :shows,  :casts
 
   #get "shows/new/:id" => "shows#new", as: :new_show_to_theatre
 
