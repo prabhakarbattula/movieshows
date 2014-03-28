@@ -1,0 +1,25 @@
+<% if %>
+    <% @theatre_place.blank? %>
+
+    <h4> No Theatres to display </h4>
+
+<% else %>
+
+    <h6> Displaying Location and Theatre <%#= @casts_hero.first.hero.upcase %> </h6>
+
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th> Location </td>
+        <th> Theatre Name </td>
+      </tr>
+
+      <% @theatre_place.each do |theatre| %>
+          <tr>
+            <td>  <%= theatre.place.upcase %> </td>
+            <td>  <%= theatre.name.upcase %> </td>
+          </tr>
+      <% end %>
+
+    </table>
+
+<% end %>

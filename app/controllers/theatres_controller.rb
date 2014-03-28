@@ -21,6 +21,7 @@ class TheatresController < ApplicationController
     redirect_to theatre_path(@theatre)
   end
 
+
   def show
     @theatre = Theatre.find(params[:id])
     #@show = Show.find_by_theatre_id(params[:id])
@@ -47,6 +48,10 @@ class TheatresController < ApplicationController
 
   def display
     @theatres = Theatre.search(params[:search]).order("name")
+  end
+
+  def display_place
+    @theatre_place  = Theatre.search_place(params[:search_place])
   end
 
   def theatre_params

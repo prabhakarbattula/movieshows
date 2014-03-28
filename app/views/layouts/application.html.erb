@@ -46,9 +46,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Movieshows</a>
+          <a class="brand"  href="#"> <i class="icon-home icon-large icon-white"></i> Movieshows</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
+              <li><%= link_to "Home", root_theatres_path  %></li>
               <li><%= link_to "Theatres", theatres_path  %></li>
               <li><%= link_to "Movies", movies_path  %></li>
               <li><%= link_to "Crew", crews_path  %></li>
@@ -66,6 +67,7 @@
               <li class="nav-header"> Search Tools </li>
               <li><%= link_to "By Movies", search_movies_path  %></li>
               <li><%= link_to "By Theatres", search_theatres_path  %></li>
+              <li><%= link_to "By Location", search_place_theatres_path  %></li>
               <li><%= link_to "By Hero", search_hero_casts_path  %></li>
               <li><%= link_to "By Heroin", search_heroin_casts_path  %></li>
             </ul>

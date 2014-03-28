@@ -1,29 +1,8 @@
 
 <h4> Displaying search results for Movies </h4>
 
-<head>
-  <style>
 
-      table, td, th
-      {
-          border:2px solid blue;
-      }
-      th
-      {
-          background-color: royalblue;
-          color:white;
-      }
-      td, th
-      {
-          padding:5px;
-      }
-      tr:nth-child(even) {background-color: white}
-      tr:nth-child(odd) {background-color: lightcyan}
-  </style>
-</head>
-
-<body>
-<table>
+<table class="table table-striped table-bordered">
   <tr>
     <th>Movie Name</th>
 
@@ -39,7 +18,7 @@
       </tr>
   <% end %>
 </table>
-</body>
 
-<%= link_to "Go Back to Main Page", root_theatres_path %>
+
+<%= link_to "Go Back to Main Page", root_theatres_path, :class => "btn btn-small btn-primary" %>
 

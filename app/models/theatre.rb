@@ -7,4 +7,8 @@ class Theatre < ActiveRecord::Base
     where("name like ?", "%#{query}%")
   end
 
+  def self.search_place(query)
+    where("place like ?", "%#{query}%")
+  end
+
 end

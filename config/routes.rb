@@ -1,18 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'crews/new'
-
-  get 'crews/create'
-
-  get 'crews/edit'
-
-  get 'crews/update'
-
-  get 'crews/show'
-
-  get 'crews/index'
-
-  get 'crews/delete'
 
   root "theatres#root"
 
@@ -24,7 +11,9 @@ Rails.application.routes.draw do
 
     collection do
       get 'search'
+      get 'search_place'
       get 'display'
+      get 'display_place'
       get 'root'
     end
 
@@ -53,6 +42,7 @@ Rails.application.routes.draw do
     end
 
   end
+
 
   resources :shows, :crews
 

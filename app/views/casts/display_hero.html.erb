@@ -1,14 +1,17 @@
 <% if %>
     <% @casts_hero.blank? %>
 
-    <h4> No Cast to display </h4>
+    <h4> No Hero to display </h4>
 
 <% else %>
 
-<h6> Displaying movies of the Heroes <%#= @casts_hero.first.hero.upcase %> </h6>
+<h6> Displaying Heros and Movies <%#= @casts_hero.first.hero.upcase %> </h6>
 
 <table class="table table-striped table-bordered">
-
+  <tr>
+    <th> Hero </td>
+    <th> Movie  </td>
+  </tr>
   <% @casts_hero.each do |cast| %>
       <tr>
          <td>  <%= cast.hero.upcase %> </td>

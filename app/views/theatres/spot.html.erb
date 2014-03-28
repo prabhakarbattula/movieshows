@@ -3,31 +3,8 @@
 
 <h4> Displaying shows for "<%= @theatre.name.upcase %>" theatre </h4>
 
-<hr>
 
-<head>
-  <style>
-
-      table, td, th
-      {
-          border:2px solid blue;
-      }
-      th
-      {
-          background-color: royalblue;
-          color:white;
-      }
-      td, th
-      {
-          padding:5px;
-      }
-      tr:nth-child(even) {background-color: white}
-      tr:nth-child(odd) {background-color: lightcyan}
-  </style>
-</head>
-
-<body>
-<table>
+<table class="table table-striped table-bordered">
   <tr>
     <th>Morning Show</th>
     <th>Matinee Show</th>
@@ -49,5 +26,5 @@
   </tr>
   <% end %>
 </table>
-</body>
+
 
