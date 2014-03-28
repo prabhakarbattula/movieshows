@@ -1,2 +1,10 @@
-<h1>Casts#edit</h1>
-<p>Find me in app/views/casts/edit.html.erb</p>
+<h6> Edit Cast for Movie </h6>
+
+<%= form_for @cast do |cast| %>
+
+    Movie : <%= cast.select :movie_id, Movie.all.collect {|t| [t.name, t.id] }, { include_blank: true} %>  <br>
+    Hero : <%= cast.select(:hero, %w{ PawanKalyan Chiranjeevi RamCharanTej AlluArjun }, :include_blank => true) %>    <br> <br>
+    Heroin : <%= cast.select(:heroin, %w{ Kajal Charmee Tamanna Rani Anushka NayanaTara}, :include_blank => true) %>    <br> <br>
+    <%= cast.submit "Edit Cast" %>
+
+<% end %>

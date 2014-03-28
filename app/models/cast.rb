@@ -1,3 +1,12 @@
 class Cast < ActiveRecord::Base
-  has_and_belongs_to_many :movies
+  belongs_to :movie
+
+  def self.search_hero(query)
+    where("hero like ?", "%#{query}%")
+  end
+
+  def self.search_heroin(query)
+    where("heroin like ?", "%#{query}%")
+  end
+
 end

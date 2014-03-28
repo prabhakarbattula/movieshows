@@ -1,2 +1,24 @@
-<h1>Casts#index</h1>
-<p>Find me in app/views/casts/index.html.erb</p>
+<h6> Displaying movies and cast <%=  %></h6>
+
+<table class="table table-striped">
+
+  <tr>
+    <th> Movie </th>
+    <th> Hero </th>
+    <th> Heroin </th>
+    <th> ACTION </th>
+    <th> ACTION </th>
+  </tr>
+
+  <% @casts.each do |cast| %>
+      <tr>
+        <td>  <%= cast.movie.name.upcase %> </td>
+        <td>  <%= cast.hero.upcase %> </td>
+        <td>  <%= cast.heroin.upcase %> </td>
+        <td> <%= link_to "EDIT",  edit_cast_path(cast) %>  </td>
+        <td> <%= link_to "DELETE", cast_path(cast), method: :delete %>  </td>
+      </tr>
+  <% end %>
+
+
+</table>

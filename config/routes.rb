@@ -1,29 +1,60 @@
 Rails.application.routes.draw do
 
+  get 'crews/new'
+
+  get 'crews/create'
+
+  get 'crews/edit'
+
+  get 'crews/update'
+
+  get 'crews/show'
+
+  get 'crews/index'
+
+  get 'crews/delete'
+
   root "theatres#root"
 
   resources :theatres do
+
     member do
       get 'spot'
     end
+
     collection do
       get 'search'
       get 'display'
       get 'root'
     end
+
   end
 
   resources :movies do
+
     member do
       get 'spot'
     end
+
     collection do
       get 'search'
       get 'display'
     end
+
   end
 
-  resources :shows,  :casts
+  resources :casts do
+
+    collection do
+      get 'search_hero'
+      get 'display_hero'
+      get 'search_heroin'
+      get 'display_heroin'
+    end
+
+  end
+
+  resources :shows, :crews
 
   #get "shows/new/:id" => "shows#new", as: :new_show_to_theatre
 

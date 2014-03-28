@@ -1,0 +1,13 @@
+<h6> Displaying movies of the Heroin <%#= @casts_heroin.first.heroin.upcase %> </h6>
+
+<table class="table table-striped table-bordered">
+
+    <% @casts_heroin.each do |cast| %>
+      <tr>
+        <td>  <%= cast.heroin.upcase %> </td>
+        <td>  <%= cast.movie.name.upcase %> </td>
+      </tr>
+    <% end %>
+
+</table>
+

@@ -1,0 +1,8 @@
+<h6> Create New Crew </h6>
+
+<%= form_for @crew do |crew| %>
+    Category : <%= crew.select(:category, %w{ Hero Heroin }, :include_blank => true) %>    <br>
+    Crew Name: <%= crew.text_field :name %>
+
+    <%= crew.submit "Create Crew" %>
+<% end %>

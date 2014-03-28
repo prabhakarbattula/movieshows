@@ -51,7 +51,7 @@
             <ul class="nav">
               <li><%= link_to "Theatres", theatres_path  %></li>
               <li><%= link_to "Movies", movies_path  %></li>
-              <li><%= link_to "Cast", casts_path  %></li>
+              <li><%= link_to "Crew", crews_path  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -66,12 +66,14 @@
               <li class="nav-header"> Search Tools </li>
               <li><%= link_to "By Movies", search_movies_path  %></li>
               <li><%= link_to "By Theatres", search_theatres_path  %></li>
-              <li><%= link_to "By Cast", "/path3"  %></li>
+              <li><%= link_to "By Hero", search_hero_casts_path  %></li>
+              <li><%= link_to "By Heroin", search_heroin_casts_path  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>
+
           <%= yield %>
         </div>
       </div><!--/row-->

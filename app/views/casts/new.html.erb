@@ -1,2 +1,10 @@
-<h1>Casts#new</h1>
-<p>Find me in app/views/casts/new.html.erb</p>
+<h6> Create Cast for Movie </h6>
+
+<%= form_for @cast do |cast| %>
+
+      Movie : <%= cast.select :movie_id, Movie.all.collect {|t| [t.name, t.id] }, { include_blank: true} %>  <br>
+       Hero : <%= cast.select :hero, Crew.all.collect {|t| [t.name] }, { include_blank: true} %>   <br>
+     Heroin : <%= cast.select :heroin, Crew.all.collect {|t| [t.name] }, { include_blank: true} %>   <br>
+    <%= cast.submit "Create Cast" %>
+
+<% end %>

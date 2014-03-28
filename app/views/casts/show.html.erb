@@ -1,2 +1,8 @@
-<h1>Casts#show</h1>
-<p>Find me in app/views/casts/show.html.erb</p>
+<h6> Cast for the Movie </h6> <h4> <%= @cast.movie.name.upcase  %> </h4>
+<hr />
+
+Hero : <%= @cast.hero.upcase %>   <br />
+Heroin: <%= @cast.heroin.upcase %> <br />
+
+<%= link_to "Go Back to Main Page", root_theatres_path, :class => "btn btn-small btn-primary" %>
+<%= link_to "Create another cast", new_cast_path, :class => "btn btn-small btn-success" %>
