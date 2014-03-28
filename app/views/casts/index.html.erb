@@ -5,7 +5,7 @@
   <tr>
     <th> Movie </th>
     <th> Hero </th>
-    <th> Heroin </th>
+    <th> Heroine </th>
     <th> ACTION </th>
     <th> ACTION </th>
   </tr>
@@ -14,7 +14,7 @@
       <tr>
         <td>  <%= cast.movie.name.upcase %> </td>
         <td>  <%= cast.hero.upcase %> </td>
-        <td>  <%= cast.heroin.upcase %> </td>
+        <td>  <%= cast.heroine.upcase %> </td>
         <td> <%= link_to "EDIT",  edit_cast_path(cast) %>  </td>
         <td> <%= link_to "DELETE", cast_path(cast), method: :delete %>  </td>
       </tr>

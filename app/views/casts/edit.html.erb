@@ -4,7 +4,7 @@
 
     Movie : <%= cast.select :movie_id, Movie.all.collect {|t| [t.name, t.id] }, { include_blank: true} %>  <br>
     Hero : <%= cast.select(:hero, %w{ PawanKalyan Chiranjeevi RamCharanTej AlluArjun }, :include_blank => true) %>    <br> <br>
-    Heroin : <%= cast.select(:heroin, %w{ Kajal Charmee Tamanna Rani Anushka NayanaTara}, :include_blank => true) %>    <br> <br>
+    Heroine : <%= cast.select(:heroine, %w{ Kajal Charmee Tamanna Rani Anushka NayanaTara}, :include_blank => true) %>    <br> <br>
     <%= cast.submit "Edit Cast" %>
 
 <% end %>

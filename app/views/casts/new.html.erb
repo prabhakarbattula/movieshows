@@ -4,7 +4,7 @@
 
       Movie : <%= cast.select :movie_id, Movie.all.collect {|t| [t.name, t.id] }, { include_blank: true} %>  <br>
        Hero : <%= cast.select :hero, Crew.where(category: "Hero").collect {|t| [t.name] }, { include_blank: true} %>   <br>
-     Heroin : <%= cast.select :heroin, Crew.where(category: "Heroin").collect {|t| [t.name] }, { include_blank: true} %>   <br>
+     Heroine : <%= cast.select :heroine, Crew.where(category: "Heroine").collect {|t| [t.name] }, { include_blank: true} %>   <br>
     <%= cast.submit "Create Cast" %>
 
 <% end %>

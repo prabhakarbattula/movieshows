@@ -1,0 +1,27 @@
+
+<% if %>
+    <% @casts_heroine.blank? %>
+
+    <h4> No Heroine to display </h4>
+
+<% else %>
+
+    <h6> Displaying Heroine and Movies <%#= @casts_hero.first.hero.upcase %> </h6>
+
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th> Heroine </td>
+        <th> Movie  </td>
+      </tr>
+
+      <% @casts_heroine.each do |cast| %>
+          <tr>
+            <td>  <%= cast.heroine.upcase %> </td>
+            <td>  <%= cast.movie.name.upcase %> </td>
+          </tr>
+      <% end %>
+
+    </table>
+
+<% end %>
+

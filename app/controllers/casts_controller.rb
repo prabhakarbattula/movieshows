@@ -33,8 +33,8 @@ class CastsController < ApplicationController
     @casts_hero  = Cast.search_hero(params[:search_hero])
   end
 
-  def display_heroin
-    @casts_heroin  = Cast.search_heroin(params[:search_heroin])
+  def display_heroine
+    @casts_heroine  = Cast.search_heroine(params[:search_heroine])
 
   end
 
@@ -46,7 +46,7 @@ class CastsController < ApplicationController
   end
 
   def cast_params
-    params.require(:cast).permit(:movie_id, :hero, :heroin)
+    params.require(:cast).permit(:movie_id, :hero, :heroine)
   end
 
 end

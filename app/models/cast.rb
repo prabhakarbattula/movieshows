@@ -5,8 +5,8 @@ class Cast < ActiveRecord::Base
     where("hero like ?", "%#{query}%")
   end
 
-  def self.search_heroin(query)
-    where("heroin like ?", "%#{query}%")
+  def self.search_heroine(query)
+    where("heroine like ?", "%#{query}%")
   end
 
 end

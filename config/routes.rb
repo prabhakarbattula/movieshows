@@ -37,8 +37,8 @@ Rails.application.routes.draw do
     collection do
       get 'search_hero'
       get 'display_hero'
-      get 'search_heroin'
-      get 'display_heroin'
+      get 'search_heroine'
+      get 'display_heroine'
     end
 
   end
